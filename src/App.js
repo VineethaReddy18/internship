@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import QRScannerComponent from './QRScanner';
+import QRScanner from './QRScanner'; // Ensure the path is correct
 import './App.css';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     return (
         <div className="App">
             <h1>QR Code Scanner</h1>
-            <QRScannerComponent onScan={handleScan} />
+            <QRScanner onScan={handleScan} />
             <p>Scanned Data: {scannedData}</p>
         </div>
     );

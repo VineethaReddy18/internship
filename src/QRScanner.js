@@ -1,10 +1,12 @@
-import React from 'react';
-import QrScanner from 'react-qr-scanner';
+import React, { useState } from 'react';
+import QrReader from 'react-qr-scanner';
 
-const QRScannerComponent = ({ onScan }) => {
+const QRScanner = ({ onScan }) => {
+    const [facingMode, setFacingMode] = useState('environment');
+
     const handleScan = (data) => {
         if (data) {
-            onScan(data.text);
+            onScan(data);
         }
     };
 
@@ -17,16 +19,26 @@ const QRScannerComponent = ({ onScan }) => {
         width: 320,
     };
 
+    const toggleCamera = () => {
+        setFacingMode((prevFacingMode) =>
+            prevFacingMode === 'user' ? 'environment' : 'user'
+        );
+    };
+
     return (
         <div>
-            <QrScanner
+            <QrReader
                 delay={300}
                 style={previewStyle}
                 onError={handleError}
                 onScan={handleScan}
+                facingMode={facingMode}
             />
+            <button onClick={toggleCamera}>
+                Switch Camera
+            </button>
         </div>
     );
 };
 
-export default QRScannerComponent;
+export default QRScanner;
