@@ -1,21 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import QRScannerComponent from './QRScanner';
+import Dashboard from './Dashboard';
 import './App.css';
+import Header from './Header';
+import Track from './Track';
 
-function App() {
-    const [scannedData, setScannedData] = useState('');
-
-    const handleScan = (data) => {
-        setScannedData(data);
-    };
-
-    return (
-        <div className="App">
-            <h1>QR Code Scanner</h1>
-            <QRScannerComponent onScan={handleScan} />
-            <p>Scanned Data: {scannedData}</p>
-        </div>
-    );
-}
+import Home from './Home';
+const App = () => (
+  <BrowserRouter>
+    <div>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<QRScannerComponent />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="/track" element={<Track/>} />
+        <Route path="/home" element={<Home/>} />
+      </Routes>
+      
+    </div>
+  </BrowserRouter>
+);
 
 export default App;
