@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import QrScanner from 'react-qr-scanner';
 
 const QRScannerComponent = () => {
-    const [scannedData, setScannedData] = useState('');
+     const [scannedData, setScannedData] = useState('');
     const [error, setError] = useState('');
 
     const handleScan = (data) => {
@@ -58,7 +58,7 @@ const QRScannerComponent = () => {
                 <p>Scanned Data</p>
                 <div className="flex justify-center m-5">
                <label className="font-Normal m-4 text-xl w-40">Product Id</label> 
-               <input type="text" className="border border-gray-400 rounded-md px-3 py-2 w-2/4"></input>
+               <input type="text" value={scannedData} className="border border-gray-400 rounded-md px-3 py-2 w-2/4"></input>
                </div>
                <div className="flex justify-center m-5">
                <label className="font-Normal m-4 text-xl w-40">Product Name</label> 
