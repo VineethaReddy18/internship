@@ -2,12 +2,21 @@ import React, { useState, useEffect } from 'react';
 import QrScanner from 'react-qr-scanner';
 
 const QRScannerComponent = () => {
-     const [scannedData, setScannedData] = useState('');
+    const [scannedData, setScannedData] = useState({
+        productId: '',
+        productName: '',
+        clientName: ''
+    });
     const [error, setError] = useState('');
 
     const handleScan = (data) => {
         if (data) {
-            setScannedData(data.text);
+            const parsedData = JSON.parse(data.text);
+            setScannedData({
+                productId: parsedData.productId || '',
+                productName: parsedData.productName || '',
+                clientName: parsedData.clientName || ''
+            });
         }
     };
 
@@ -46,29 +55,34 @@ const QRScannerComponent = () => {
                 />
             )}
             <div className="mt-4">
-                {/* <label htmlFor="scannedData" className="block text-xl font-bold mb-2">Scanned Data:</label>
-                <input
-                    type="text"
-                    id="scannedData"
-                    name="scannedData"
-                    className="border border-gray-300 rounded-md px-3 py-2 w-full"
-                    value={scannedData}
-                    readOnly
-                /> */}
-                <p>Scanned Data</p>
                 <div className="flex justify-center m-5">
-               <label className="font-Normal m-4 text-xl w-40">Product Id</label> 
-               <input type="text" value={scannedData} className="border border-gray-400 rounded-md px-3 py-2 w-2/4"></input>
-               </div>
-               <div className="flex justify-center m-5">
-               <label className="font-Normal m-4 text-xl w-40">Product Name</label> 
-               <input type="text" className="border border-gray-400 rounded-md px-3 py-2 w-2/4"></input>
-               </div>
-               <div className="flex justify-center m-5">
-               <label className="font-Normal m-4 text-xl w-40">Client Name</label> 
-               <input type="text" className="border border-gray-400 rounded-md px-3 py-2 w-2/4"></input>
-            </div>
-            <button className="bg-blue-500 border-slate-300 w-28 p-3 text-slate-200 rounded-lg">Submit</button>
+                    <label className="font-Normal m-4 text-xl w-40">Product Id</label>
+                    <input 
+                        type="text" 
+                        value={scannedData.productId} 
+                        className="border border-gray-400 rounded-md px-3 py-2 w-2/4"
+                        readOnly
+                    />
+                </div>
+                <div className="flex justify-center m-5">
+                    <label className="font-Normal m-4 text-xl w-40">Product Name</label>
+                    <input 
+                        type="text" 
+                        value={scannedData.productName} 
+                        className="border border-gray-400 rounded-md px-3 py-2 w-2/4"
+                        readOnly
+                    />
+                </div>
+                <div className="flex justify-center m-5">
+                    <label className="font-Normal m-4 text-xl w-40">Client Name</label>
+                    <input 
+                        type="text" 
+                        value={scannedData.clientName} 
+                        className="border border-gray-400 rounded-md px-3 py-2 w-2/4"
+                        readOnly
+                    />
+                </div>
+                <button className="bg-blue-500 border-slate-300 w-28 p-3 text-slate-200 rounded-lg">Submit</button>
             </div>
         </div>
     );
