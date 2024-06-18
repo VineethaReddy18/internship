@@ -1,0 +1,39 @@
+.product-section-container {
+  width: 30%;
+  flex-grow: 1;
+  background-color: antiquewhite;
+  padding: 20px;
+}
+
+.product-heading {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+.product-form-label {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+.product-form-input {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+}
+
+.submit-button {
+  background-color: rgb(136, 57, 255);
+  color: white;
+  padding: 16px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  margin-top: 30px;
+}

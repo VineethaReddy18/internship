@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Html5QrcodePlugin from "./Html5QrcodePlugin.js";
 import axios from "axios";
-import "./QRScanner.css";
+import "./ProductSection.css";
 
 const formatDecodedResult = (text) => {
   // console.log(text);
@@ -17,15 +16,7 @@ const formatDecodedResult = (text) => {
   return qrData;
 };
 
-const QRScanner = () => {
-  const [error, setError] = useState(false);
-  const [prod, setProd] = useState("");
-  const [sap, setSap] = useState("");
-  const [prodD, setProdD] = useState("");
-  const [client, setClient] = useState("");
-  const [qty, setQty] = useState("");
-  const [serialNo, setSerialNo] = useState("");
-
+const ProductSection = () => {
   const setData = (obj) => {
     setProd(obj.prod);
     setSap(obj.sap);
@@ -161,4 +152,4 @@ const QRScanner = () => {
   );
 };
 
-export default QRScanner;
+export default ProductSection;

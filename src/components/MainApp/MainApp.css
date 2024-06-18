@@ -1,0 +1,149 @@
+.mainapp-container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: aliceblue;
+  margin: auto 0px;
+  min-height: 90vh;
+  padding-bottom: 40px;
+}
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+.submit-dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.589);
+  z-index: 3;
+  max-height: 100vh;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  min-height: 400px;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.submit-error-text {
+  font-size: 24px;
+  color: red;
+  font-weight: 700;
+}
+
+.submit-success-text {
+  font-size: 24px;
+  color: rgb(9, 213, 9);
+  font-weight: 700;
+}
+
+.retry-button {
+  font-size: 24px;
+  background-color: rgb(35, 35, 255);
+  font-weight: 700;
+  color: white;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.done-button {
+  font-size: 24px;
+  background-color: rgb(11, 228, 0);
+  font-weight: 700;
+  color: white;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.product-section-container {
+  width: 30%;
+  flex-grow: 1;
+  background-color: antiquewhite;
+  padding: 20px;
+}
+
+.product-heading {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+.product-form-label {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+.product-form-input {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+}
+
+.station-section-container {
+  width: 25%;
+  flex-grow: 1;
+  background-color: aqua;
+  padding: 20px;
+}
+.station-heading {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+.form-label {
+  width: 100%;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+.form-input {
+  width: 100%;
+  font-size: 32px;
+  font-weight: 700;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 28px;
+  border: 2px solid black;
+}
+.submitted {
+  cursor: not-allowed;
+}
+
+.submit-button {
+  background-color: rgb(136, 57, 255);
+  color: white;
+  padding: 16px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  margin-top: 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

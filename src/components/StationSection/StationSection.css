@@ -1,0 +1,32 @@
+.station-section-container {
+  width: 25%;
+  flex-grow: 1;
+  background-color: aqua;
+  padding: 20px;
+}
+.station-heading {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+.form-label {
+  width: 100%;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+.form-input {
+  width: 100%;
+  font-size: 32px;
+  font-weight: 700;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 28px;
+  border: 2px solid black;
+}
+
+.submitted {
+  cursor: not-allowed;
+}
