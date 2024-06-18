@@ -13,6 +13,7 @@ const MainApp = () => {
   const [submitting, setSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState(true);
   const [delay, setDelay] = useState(true);
+  const [stationErrorMessage, setStationErrorMessage] = useState("");
 
   const [stationId, setStationId] = useState("");
   const [stationName, setStationName] = useState("");
@@ -110,8 +111,18 @@ const MainApp = () => {
       } catch (error) {
         console.log("axios error", error);
       }
-    } else {
+    } else if (stationId < prevStation2 + 1) {
       //show warning that product is not reached the station with its number
+      setStationErrorMessage(
+        `The product is already scanned at the station ${stationId}`
+      );
+      setPrevStation(prevStation2 + 1);
+      setDelay(false);
+      setSubmitError(true);
+    } else {
+      setStationErrorMessage(
+        `The product is not reached the station ${prevStation2 + 1}`
+      );
       setPrevStation(prevStation2 + 1);
       setDelay(false);
       setSubmitError(true);
@@ -147,8 +158,7 @@ const MainApp = () => {
               {submitError && (
                 <>
                   <p className="submit-error-text">
-                    Error: The product is not reached the station {prevStation}
-                    <br></br>Please verify the details
+                    {stationErrorMessage} <br></br>Please verify the details
                   </p>
                   <button onClick={retrySubmitting} className="retry-button">
                     Retry

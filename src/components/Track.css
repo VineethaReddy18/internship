@@ -1,0 +1,62 @@
+.track-container {
+  display: flex;
+  gap: 30px;
+  background-color: aliceblue;
+  padding: 30px;
+  min-height: 90vh;
+}
+
+.track-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+  background-color: aqua;
+  padding: 30px;
+  text-align: center;
+}
+
+.product-heading {
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+}
+.product-form-label {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+.product-form-input {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 2px solid black;
+}
+.product-submit-button {
+  background-color: rgb(136, 57, 255);
+  color: white;
+  padding: 16px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+.key {
+  display: block;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.value {
+  display: block;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
