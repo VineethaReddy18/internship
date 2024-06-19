@@ -9,7 +9,6 @@ import { convertToIST } from "./Utils/Util";
 // Example usage
 let date = new Date(); // Replace with your date
 console.log(convertToIST(date));
-
 const Track = () => {
   const [prod, setProd] = useState("");
   const [productData, setProductData] = useState({});
@@ -44,11 +43,15 @@ const Track = () => {
       setProductDetails(formattedData);
     }
   };
+  
   const renderDetails = () => {
     console.log(productData);
     return (
       <div>
-        <PDFGenerator data={productData} />
+        {
+          (productData.prevStation===3)&&<PDFGenerator data={productData} />
+        }
+        
         <p>
           <span className="key">Prod</span>
           <span className="value">{productData.prod}</span>
