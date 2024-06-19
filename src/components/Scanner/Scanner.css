@@ -1,12 +1,15 @@
 .scanner-container {
   width: 25%;
   flex-grow: 0;
-  background-color: cornflowerblue;
+  background-color:white;
   padding: 20px;
+  border-radius:20px;
+  border: 2px solid rgb(228, 231, 235);
+  
 }
 
 .scanner-button {
-  background-color: rgb(136, 57, 255);
+  background-color: blue;
   color: white;
   padding: 16px;
   width: 100%;

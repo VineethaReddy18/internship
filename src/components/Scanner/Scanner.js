@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Html5Qrcode } from "html5-qrcode";
 import "./Scanner.css";
+
 const Scanner = (props) => {
   const { setScannedData } = props;
   const [scanning, setScanning] = useState(false);

@@ -265,5 +265,4 @@ const MainApp = () => {
     </div>
   );
 };
-
 export default MainApp;

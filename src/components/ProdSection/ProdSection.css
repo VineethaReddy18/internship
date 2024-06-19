@@ -3,6 +3,7 @@
   flex-grow: 1;
   background-color: antiquewhite;
   padding: 20px;
+  shadow:20px;
 }
 
 .product-heading {
