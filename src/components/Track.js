@@ -21,20 +21,18 @@ const Track = () => {
   // const [errorMessage, setErrorMessage] = useState(false);
 
   const submitData = async () => {
-    try{
-    const res = await axios.get(`http://localhost:8000/product/${prod}`);
-    const exists = res.data.found;
-    if (exists) {
-      setProductData(res.data.productDb);
-      setScanned(true);
-    } else {
-      setErrorMessage("Product id didn't match");
+    try {
+      const res = await axios.get(`http://localhost:8000/product/${prod}`);
+      const exists = res.data.found;
+      if (exists) {
+        setProductData(res.data.productDb);
+        setScanned(true);
+      } else {
+        setErrorMessage("Product id didn't match");
+      }
+    } catch (error) {
+      console.log("error", error);
     }
-  }catch(error){
-    console.log("error",error);
-  }
-  
-  
   };
   const GetScannedData = (data) => {
     if (data.slice(0, 2) === "Pr") {
@@ -43,15 +41,13 @@ const Track = () => {
       setProductDetails(formattedData);
     }
   };
-  
+
   const renderDetails = () => {
     console.log(productData);
     return (
       <div>
-        {
-          (productData.prevStation===3)&&<PDFGenerator data={productData} />
-        }
-        
+        {productData.prevStation === 3 && <PDFGenerator data={productData} />}
+
         <p>
           <span className="key">Prod</span>
           <span className="value">{productData.prod}</span>

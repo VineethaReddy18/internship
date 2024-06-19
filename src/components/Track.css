@@ -1,7 +1,7 @@
 .track-container {
   display: flex;
   gap: 30px;
-  background-color:white;
+  background-color: white;
   padding: 30px;
   min-height: 90vh;
 }
@@ -11,11 +11,11 @@
   flex-direction: column;
   gap: 10px;
   flex-grow: 1;
-  background-color:white;
+  background-color: white;
   padding: 30px;
   text-align: center;
-  shadow:10px;
-  border-radius:10px;
+  shadow: 10px;
+  border-radius: 10px;
   border: 2px solid rgb(228, 231, 235);
 }
 
@@ -30,7 +30,6 @@
   font-weight: 700;
   margin-top: 16px;
   margin-bottom: 10px;
-  
 }
 .product-form-input {
   width: 100%;
@@ -43,7 +42,7 @@
   border: 2px solid black;
 }
 .product-submit-button {
-  background-color:blue;
+  background-color: blue;
   color: white;
   padding: 16px;
   width: 100%;
@@ -63,4 +62,9 @@
   padding: 10px;
   border-radius: 10px;
   border: 1px solid black;
+}
+
+.input-file {
+  background-color: black;
+  color: white;
 }
